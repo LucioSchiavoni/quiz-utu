@@ -1,0 +1,20 @@
+[
+  {
+    "pregunta": "¿Lenguaje de programacion utilizado para sitios web?",
+    "opciones": ["Rust", "HTML", "Solidity", "Haskell"],
+    "respuestaCorrecta": "HTML",
+    "pista": "Hypertext Markup Languague"
+  },
+  {
+    "pregunta": "Tipo de red de informatica que conecta computadoras en todo el mundo",
+    "opciones": ["Bluethoot", "Web 3", "Internet", "Blockchain"],
+    "respuestaCorrecta": "Internet",
+    "pista": "red de computadoras interconectadas a nivel mundial en forma de tela de araña"
+  },
+    {
+    "pregunta": "Nombre del software utilizado para proteger datos en un dispositivo informatico",
+    "opciones": ["Malware", "Antivirus", "Sistema operativo", "Pendrive"],
+    "respuestaCorrecta": "Antivirus",
+    "pista": "detecta la presencia de un virus informatico en un disquete o en una computadora y lo elimina"
+  }
+]
