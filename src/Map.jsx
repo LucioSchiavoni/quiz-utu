@@ -3,12 +3,13 @@ import { useEffect, useMemo, useState } from 'react'
 
 // api de google
 const apiKey = import.meta.env.VITE_GOOGLE_MAP
+const API = "AIzaSyD-seCYDLQMumBWgaKid6jVGxHpYH_eBys"
 
  export default function Map()  {
 
 
      const {isLoaded} = useLoadScript({ 
-      googleMapsApiKey: apiKey,})
+      googleMapsApiKey: API,})
 
 
 
