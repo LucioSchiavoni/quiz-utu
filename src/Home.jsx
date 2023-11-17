@@ -42,22 +42,25 @@ const Home = () => {
 
   return (
     <>
-      <div>
+      <div className='text-3xl '>
         <h1>Quiz:</h1>
 
         {preguntaActual < preguntas.length && (
           <div key={preguntaActual}>
             {/* de mi json que esta en preguntas extraigo preguntaActual y consumo el valor de esa pregunta */}
-            <p className=''>{preguntas[preguntaActual].pregunta}</p>
-            <div>
+            <p className='mb-5'>{preguntas[preguntaActual].pregunta}</p>
+            <div className='grid grid-cols-2 gap-5 w-8/12 m-auto mb-5 bg-white text-black rounded-lg p-4'>
               {/* luego mapeo las 4 opciones de esa pregunta ponienod opcion como el valor para mapearlo y opcionIndex para marcar el indice de cada uno */}
+              
               {preguntas[preguntaActual].opciones.map((opcion, opcionIndex) => (
-                <div key={opcionIndex}>
+                
+                <div key={opcionIndex} className='flex '>
                   <input
                     type="radio"
                     id={opcion}
                     name="respuesta"
                     value={opcion}
+                    className='form-control'
                     // respuestaSeleccionada capturara la opcion que ingrerso el user
                     checked={respuestaSeleccionada === opcion}
                     // al darle al boton la funcion setRespuesta actualiza el valor 
@@ -68,18 +71,20 @@ const Home = () => {
               ))}
             </div>
             {/* el boton que valida si la respuesta es correcta o no */}
-            <button onClick={verificarRespuesta}>Verificar respuesta</button>
-{/* si mostrar pista es true, muestra la pista */}
+            <button onClick={verificarRespuesta} className='bg-white  text-black ml-5 text-xl font-semibold hover:bg-gray-300 hover:scale-125 transition-all duration-300 delay-150 '>Verificar respuesta</button>
+
+
+            <button onClick={avanzarPregunta} className='bg-white  text-black ml-5 text-xl font-semibold hover:bg-gray-300 hover:scale-125 transition-all duration-300 delay-150 '>Siguiente pregunta</button>
+          </div>
+          
+        )}
+        {/* si mostrar pista es true, muestra la pista */}
             {mostrarPista && (
               <div>
                
-                <p>Pista: {preguntas[preguntaActual].pista}</p>
+                <p className='bg-white p-4 rounded-md text-black mt-5'>Pista: {preguntas[preguntaActual].pista}</p>
               </div>
             )}
-
-            <button onClick={avanzarPregunta}>Siguiente pregunta</button>
-          </div>
-        )}
       </div>
     </>
   );
